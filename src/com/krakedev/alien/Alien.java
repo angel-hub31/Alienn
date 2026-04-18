@@ -33,7 +33,30 @@ public class Alien {
 
 		this.precioTotal = 0;
 
-		// calcularPrecioTotal();
+		//calcularPrecioTotal();
+	}
+	public boolean agregarBrazos(int cantidad) {
+	    int total = this.numeroBrazos + this.numeroPies + cantidad;
+
+	    if (total > 10) {
+	        return false;
+	    }
+
+	    this.numeroBrazos += cantidad;
+	    //calcularPrecioTotal();
+	    return true;
+	}
+
+	public boolean agregarPies(int cantidad) {
+	    int total = this.numeroBrazos + this.numeroPies + cantidad;
+
+	    if (total > 10) {
+	        return false;
+	    }
+
+	    this.numeroPies += cantidad;
+	    //calcularPrecioTotal();
+	    return true;
 	}
 
 	public int getTamanio() {
